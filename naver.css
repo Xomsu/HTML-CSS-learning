@@ -1,0 +1,43 @@
+/*
+css의 주석 형태 자바랑 비슷하네
+그럼 여기서 어떤 div의 css인지 알수있냐
+그냥 봐
+div를 빼도 괜찮음. 다만 div가 아닌경우는 꼭 적어줘야함 ex) <header> 등
+기본적으로 div나 이런것들은 브라우저별로 디폴트로정해주는 옵션들이 있음 style탭 확인
+html태그에 적용된 css코드가 div태그에도 영향을 미침 왤까 ==> css의 특성
+css는 Cascading Style Sheet약자.
+그래서 덮어쓰는 느낌인데 결국 태그를 제공하는 폼이 html이니까 여기서 바뀐게 영향을 미칠 수 밖에없음.
+pixel은 상대적인길이임. 모니터의 pixel을 알아야할 필요 있음. 
+ex) 내 모니터 가로가 1920픽셀이라고 치면 1080px는 1920등분 중 1080개를 차지하는것.
+내 모니터 pixel이 궁금하면 console 창에 screen.width, screen.height 일명 해상도!
+div내의 자식 태그들 선택가능 (선택자) > 태그명
+자손 태그들의 선택자는 공백 + 태그명 일반적으로 꺽쇠가 귀찮아서 자손선택을 많이함
+CSS는 걍 외우는거
+div의 display block 이 있으면 기본적으로 1태그당 1줄 너비를 전부 차지함. 실제로 내가 520 280 지정을 해줬음에도 1줄로 표시가 안됨
+그런 경계를 margin이라고 함.
+*/
+#inheader{
+  margin: 0 auto; 
+  width: 1080px;
+}
+
+/*
+#inheader h1{
+    자손 선택자
+}
+*/
+
+#header-search > h1 {
+    width : 280px;  
+    display: inline-block;/*디폴트로 브라우져에서 주어지는 옵션은 dispaly: block;임*/
+}
+
+#header-search h2 {
+    display : none;
+}
+
+#header-search fieldset{
+    width : 280px;
+    display: inline-block;
+}
+

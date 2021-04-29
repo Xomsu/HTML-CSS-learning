@@ -4,50 +4,78 @@
         <meta charset="utf-8">
         <title>네이버</title>
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="stylesheet" href="./naver.css" />
 
     </head>
     <body>
-        <h1>
-            <a href= "https://www.naver.com">네이버</a>
-        </h1>
 
-        <h2>검색창</h2>
-
-        <fieldset>
-        <ul><!-- unordedred list--><!-- ol==> ordered list 숫자가 매겨짐-->
-            <li>메일</li><!--list item-->
-            <li>카페</li><!--list item-->
-            <li>블로그</li><!--list item-->
-            <li>지식인</li><!--list item-->
-            <li>쇼핑</li><!--list item-->
-            <li>네이버 Pay</li><!--list item-->
-
+        <header>
+           
+            <!--css는 이런식으로 속성명 속성값식으로 구성되어 있음. px = pixel, 속성이 여러개인 경우 구분은 ;으로-->
+            <!--css 문법 ==> 속성명 : 속성값 ; css는 파일을 따로 쓴다고 했는데 왜 ? html에 css를 쓰는경우 인라인 스타일이라고 칭함 권장되는 방식은 아님-->
+            <div id = "inheader"><!--큰 덩어리 가운데 정렬용 div-->
+                <span><!--span=> 그냥 inline cf) inline block, block 태그의 경우 그냥 텍스트, 인라인 블록과의 차이는? span태그는 자기의 contents만큼만 크기를 차지. inlineblock의 경우는 높이와 너비의 지정이 가능.-->
+                    <span>네이버를 시작페이지로</span>
+                    <span>쥬니어 네이버</span>
+                    <sapn>해피빈</span>
+                </span>
+                <div id = "header-search">
             
-        </ul>
-            <legend>검색</legend>
-            <input />
-            <button>검색</button>
+                    <h1>
+                        <a href= "https://www.naver.com">네이버</a>
+                    </h1>
+    
+                    <h2>검색창</h2><!--화면에선 검색창이라는 글씨가 안보이는데? 스크린리더 전용 for 시각 장애인-->
+                        <fieldset>
+                            <legend>검색</legend>
+                            <input />
+                            <button>검색</button>
+                        </fieldset>
+                </div>
+                
+              
+            </div>
+        </header>
 
+        <nav>
+            <ul><!-- unordedred list--><!-- ol==> ordered list 숫자가 매겨짐-->
+                <li>메일</li><!--list item-->
+                <li>카페</li><!--list item-->
+                <li>블로그</li><!--list item-->
+                <li>지식인</li><!--list item-->
+                <li>쇼핑</li><!--list item-->
+                <li>네이버 Pay</li><!--list item-->
 
-        </fieldset>
-        <h2>실시간 검색어</h2>
-        <h3>연합 뉴스</h3>
-        <ol>
-            <li>뉴스 리스트 1번</li>
-            <li>뉴스 리스트 2번</li>
-            <li>뉴스 리스트 3번</li>
-            <li>뉴스 리스트 4번</li>
-            <li>뉴스 리스트 5번</li>
-            <li>뉴스 리스트 6번</li>
-        </ol>
-        <h3>언론사 목록</h3>
-        <ul>
-            <li><img src="./마메종로고.jpg" /></li>
-        </ul>
-        <h2>뉴스</h2>
-        <h3>법률</h3>
-        <h3>쇼핑</h3>
+                
+            </ul>
+        </nav>
 
+        <main>
+            <h2>실시간 검색어</h2>
+            <h3>연합 뉴스</h3>
+            <ol>
+                <li>뉴스 리스트 1번</li>
+                <li>뉴스 리스트 2번</li>
+                <li>뉴스 리스트 3번</li>
+                <li>뉴스 리스트 4번</li>
+                <li>뉴스 리스트 5번</li>
+                <li>뉴스 리스트 6번</li>
+            </ol>
+            <h3>언론사 목록</h3>
+            <ul>
+                <li><img src="./마메종로고.jpg" alt="마메종로고" /></li>
+            </ul>
+
+            <h2>뉴스</h2>
+            <h3>법률</h3>
+            <h3>쇼핑</h3>
+        </main>
+
+        <footer>
+            <div>공지사항</div>
+            <div>Creaters</div>
+            <div>회사소개</div>
+        </footer>
 
     </body>
 </html>
@@ -66,5 +94,18 @@
     링크는 손가락 , 버튼은 손가락모양 x 일반 마우스 커서가 기본(default)임 
     <span>태그는 텍스트를 감싸는 태그 별도의 의미는 존재 x
     프론트 엔드 코드는 남들에게 모두 보이기 때문에 보안에 위험이 될 수 있는 요소는 x
-    
+    이미지에는 시각장애인을 위해 alt = ""형태의 이미지 설명이 필요함.
+    기울어진 글자는 <i>태그 기울인 글자의 의미는 ?
+        1. 기울어진 글자는 디자인적인 요소인데 css가 아닌 html에서 하는게 맞는지에 대한 논쟁있음
+        2. <i>의 i가 icon의 의미도 가짐.
+    레이아웃이라 하면? 배치.
+    부가정보를 알려주는 푸터, 헤더.의 배치 이 배치를 우겨넣으면 유지보수 면에서 굉장히 힘듬.
+    배치는 항상 가로를 먼저 나누고 가로 구역 내에서도 가로, 그리고 세로
+    div태그 = division 구역을 나누는 태그 (가로)
+    div태그의 단점 -> 서로 구분이 안됨 <div id="~~">식으로 구분을 줬었음 근데 HTML5이후부터는 <header>, nav 등등태그를 줘버림
+    웬만하면 div떡칠보단 역할에 맞는 div이름 태그를 넣어주는게 좋음
+
+    확장툴 validate document =>웹표준 제약사항 체크해줌
+    <center>라는 태그쓰는 강의는 너무오래된것 없어졌음.
+    구역 자체의 가운데 정렬 or 컨텐츠의 가운데 정렬
 -->
